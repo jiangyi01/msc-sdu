@@ -1,10 +1,14 @@
 import React,{Component} from 'react';
-
+import Button from 'antd';
 class MscIndex extends Component{
     render(){
         return (
             <div>
-            这是一个mscSdu的门户网站
+                <div>
+                    <Button>
+                        介绍
+                    </Button>
+                </div>
             </div>
         )
     }
