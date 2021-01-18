@@ -4,27 +4,28 @@ import './mscIndex.css';
 import '../login/loginPage'
 import  LoginPage  from '../login/loginPage';
 import {connect} from "react-redux"
-import exports from 'webpack';
-//import FindUs from '../everyConstructor/eachPart/findUs/findUs';
+
+import FindUs from '../everyConstructor/eachPart/findUs/findUs';
+import FirstPage from '../everyConstructor/eachPart/firstPage/firstPage';
 class MscIndex_part extends Component{
     constructor(props){
         super();
         this.state={
-            visible1:1,
-            visible2:0,
-            visible3:0,
-            visible4:0,
-            visible5:0,
-            color1:"black",
-            color2:"black",
-            color3:"black",
-            color4:"black",
-            color5:"black",
-            colorFont1 : "white",
-            colorFont2 : "white",
-            colorFont3 : "white",
-            colorFont4 : "white",
-            colorFont5 : "white"
+                    visible1:1,
+                    visible2:0,
+                    visible3:0,
+                    visible4:0,
+                    visible5:0,
+                    color1:"black",
+                    color2:"black",
+                    color3:"black",
+                    color4:"black",
+                    color5:"black",
+                    colorFont1 : "white",
+                    colorFont2 : "white",
+                    colorFont3 : "white",
+                    colorFont4 : "white",
+                    colorFont5 : "white"
 
         }
     }
@@ -124,7 +125,7 @@ class MscIndex_part extends Component{
                     colorFont5 : "black"
             });
             break;
-            
+
         }
     }
     render(){
@@ -155,19 +156,18 @@ class MscIndex_part extends Component{
                     </Button>
                 </div>
                 <div>
-                    {this.state.visible1 == 1 ? <LoginPage/> : null}
-                    {this.state.visible2 == 1 ? <></> : null}
+                    {this.state.visible1 == 1 ? <FirstPage/> : null}
+                    {this.state.visible2 == 1 ? <LoginPage/>  : null}
                     {this.state.visible3 == 1 ? <LoginPage/> : null}
                     {this.state.visible4 == 1 ? <LoginPage/> : null}
-                    {this.state.visible5 == 1 ? <LoginPage/> : null}
+                    {this.state.visible5 == 1 ? <FindUs/> : null}
                 </div>
             </div>
-            
 
             </div>
         )
     }
-} 
+}
 const mapStateToProps=(
     state, 
     ownProps
@@ -176,7 +176,7 @@ const mapStateToProps=(
         value: state.login.id
       }
   }
-    
+
   const mapDispatchToProps=(
     dispatch,
     ownProps
@@ -186,13 +186,13 @@ const mapStateToProps=(
       {
           dispatch({type:GET_MESSAGE_OFYOU,payload:{id:100,token:12121,name:"as"}});
       }
-  
+
     };
   }
-  
+
    const MscIndex = connect
     (
-      mapStateToProps,
-      mapDispatchToProps
+        mapStateToProps,
+        mapDispatchToProps
     )(MscIndex_part);
 export default MscIndex;
