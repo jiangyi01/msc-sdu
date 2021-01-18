@@ -11,8 +11,9 @@ const defaultState = {
     login_fail : 0,
     login_success : 0,
     name : '',
-    id : '',
-    token : ''
+    id : "111",
+    token : '',
+    indexPageChoose:0
 };
 
 export default function login(state = defaultState, action){

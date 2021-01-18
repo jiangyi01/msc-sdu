@@ -10,8 +10,8 @@
     background-color: black;
     color: white;
     text-align: center;
-    
     border: black;
+    border-radius: 4px 4px 0 0;
 }
 #headText{
     width: 100%;
